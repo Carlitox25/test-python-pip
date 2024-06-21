@@ -23,7 +23,7 @@ def run():
   paises = df['Country'].values
   porcentajes = df['World Population Percentage'].values
 
-  charts.generate_pie_chart(countries, percentages)
+  charts.generate_pie_chart(paises, porcentajes)
 
   data = read_csv.read_csv('data.csv')
   country = input('Type Country => ')
@@ -33,8 +33,10 @@ def run():
   if len(result) > 0:
     country = result[0]
     labels, values = utils.get_population(country)
+    print(labels,values)
     charts.generate_bar_chart(labels, values)
   
 
 if __name__ == '__main__':
   run()
+
