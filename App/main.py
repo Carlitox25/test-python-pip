@@ -18,13 +18,13 @@ def run():
   # En Pandas se utliza los "dataFrames" (df) 
   df = pandas.read_csv('data.csv')
   # Para filtrar:
-  df = df[df['Continent'] == 'South America']
+  df = df[df['Continent'] == 'Africa']
   #Para obtener la lista de paises y sus porcentajes:
   countries = df['Country'].values
   percentages = df['World Population Percentage'].values
   print(countries)
   print(percentages)
-  #charts.generate_pie_chart(countries, percentages)
+  charts.generate_pie_chart(countries, percentages)
 
   data = read_csv.read_csv('data.csv')
   country = input('Type Country => ')
